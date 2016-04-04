@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0" />
+    <title>Review App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+   <!------HOME PAGE------>
+    <section data-role="page" id="home" class="inactive-page">
+  <header class="header">
+    <h3>ReviewR</h3>
+  </header>
+      <!--LIST-->
+        <h5 class="title"></h5>
+        <div id="pattern" class="pattern">
+            <ul class="list img-list">
+            <li><div id="listItem" class="li-text">
+						<h4 class="li-head"></h4>
+						<p class="li-sub"></p>
+					</div></li>
+            </ul>
+        </div>
+   <!---- FAB Button ---->
+   <div class="round-button">
+      <div class="round-button-circle">
+        <a href="#test" class="noselect page-link" id="plus">&#43;</a>
+      </div>
+    </div>
+</section>
+<!------End of Home Page------>
+<!------REVIEW PAGE------>
+<section data-role="page" id="other" class="inactive-page" >
+  <header class="header">
+    <h3>ReviewR</h3>
+  </header>
+              <div class="round-button-back">
+                  <div class="round-button-circle">
+                    <a href="#home" class="noselect page-link" id="plus"><i class="fa fa-arrow-circle-left"></i></a>
+                  </div>
+                </div>
+    <div id="singleReviewDiv">
+    </div>
+</section>
+<!------End of Review Page------>
+<!------SUBMIT FORM PAGE------>
+<section data-role="page" id="test" class="inactive-page" >
+  <header class="header">
+    <h3>ReviewR</h3>
+  </header>
+    <h4>Submit a new photo review:</h4>
+     <div class="wrapper">
+         <form name="submitForm" id="submitForm" method="post">
+                <input type="text" id="title" autocomplete="on" required placeholder="Title">
+                <input type="text" id="review" autocomplete="on" required placeholder="Review">
+                <input type="number" id="rating" min="1" max="5" required placeholder="Rating 1-5">
+                
+             <!---- Capture Photo ------>
+             <button id="camBtn" form="submitForm" type="button">
+                 <div class="round-button-camera">
+                     <div class="round-button-circle">
+                         <a class="noselect" id="plus"><i class="fa fa-camera"></i></a>
+                     </div>
+                 </div>
+             </button>
+             <img id="smallImage" src="" />
+                <!----Check Button ---->
+                <button id="submitBtn" type="submit" form="submitForm">
+                <div class="round-button-check">
+                  <div class="round-button-circle check">
+                      <a class="noselect" id="plus"><i class="fa fa-check"></i></a>
+                  </div>
+                </div>
+                </button>
+         </form>
+    </div>
+                <div class="round-button-back">
+                  <div class="round-button-circle">
+                    <a href="#home" class="noselect page-link fa-2x" id="plus"><i class="fa fa-arrow-circle-left"></i></a>
+                  </div>
+                </div>
+</section>
+<!------End of Submit Page------>
+     <!------ JS Scripts ------>
+    <script charset="utf-8" src="cordova.js"></script>
+     <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+     <script src="js/index.js"></script>
+     
+</body>
+</html>
